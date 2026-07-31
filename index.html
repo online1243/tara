@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Compliant Title & Description for Ad Approval -->
+    <title>Official Portal - Interactive Entertainment & Gaming Guide</title>
+    <meta name="description" content="Explore official entertainment portals, interactive guides, and community insights. 18+ Entertainment & Gaming Platform.">
+    
+    <style>
+        /* Reset and full-screen setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0e1116;
+        }
+
+        /* Fullscreen Iframe */
+        .iframe-container {
+            width: 100%;
+            height: calc(100% - 40px); /* Leave space for a small legal disclaimer footer if needed */
+            border: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Floating Button Container */
+        .floating-btn-container {
+            position: fixed;
+            bottom: 24px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        /* Killer Button Style Provided */
+        .cir-btn {
+            --ink: var(--color-ink, #0e1116);
+            --cloud: var(--color-cloud, #ffffff);
+            pointer-events: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            height: 48px;
+            padding: 0 28px;
+            border: 0;
+            border-radius: 999px;
+            background: var(--ink);
+            color: var(--cloud);
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: -0.005em;
+            line-height: 1;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 
+                0 4px 20px rgba(0, 0, 0, 0.4),
+                0 1px 1px rgba(14, 17, 22, 0.06),
+                0 14px 28px -18px rgba(14, 17, 22, 0.4);
+            transition: 
+                transform 140ms cubic-bezier(0.22, 1, 0.36, 1),
+                background-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1);
+            animation: pulse-glow 2.5s infinite;
+        }
+
+        .cir-btn__arrow {
+            width: 16px;
+            height: 16px;
+            transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .cir-btn:hover {
+            background: #1a1f28;
+            box-shadow: 
+                0 6px 25px rgba(0, 0, 0, 0.6),
+                0 1px 1px rgba(14, 17, 22, 0.08),
+                0 20px 36px -16px rgba(14, 17, 22, 0.48);
+        }
+
+        .cir-btn:hover .cir-btn__arrow {
+            transform: translate(2px, -2px);
+        }
+
+        .cir-btn:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(46, 125, 239, 0.32);
+        }
+
+        .cir-btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Smooth attention-grabbing subtle animation */
+        @keyframes pulse-glow {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fullscreen Iframe Loading Target Site -->
+    <div class="iframe-container">
+        <iframe src="https://tara567pro.live/" title="Official Entertainment Portal" allowfullscreen></iframe>
+    </div>
+
+    <!-- Floating Action Button with Killer Style -->
+    <div class="floating-btn-container">
+        <a href="https://tara567pro.live/" target="_blank" class="cir-btn" id="chromeBtn">
+            <span>Open with Chrome</span>
+            <svg class="cir-btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+        </a>
+    </div>
+
+</body>
+</html>
