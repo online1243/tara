@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-
-<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1588529089317788');fbq('track','PageView');</script><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1588529089317788&ev=PageView&noscript=1"/></noscript>
-
-
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>VIP Analysis Education</title>
   <link rel="dns-prefetch" href="https://t.me">
+
+  <!-- Meta Pixel Code with 5-Second Delay -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', '1588529089317788');
+
+    // 5-Second Time Delay Setup
+    let isEligible = false;
+    setTimeout(function() {
+      isEligible = true;
+      fbq('track', 'PageView'); // PageView event only fires after 5s
+    }, 5000);
+
+    // Button Click Tracking (Active only after 5s)
+    function trackJoinClick() {
+      if(isEligible) {
+        fbq('track', 'Lead');
+      }
+    }
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1588529089317788&ev=PageView&noscript=1"/></noscript>
+
   <style>
     :root{--a:#0b0f19;--b:rgba(20,28,47,0.85);--c:rgba(255,255,255,0.08);--d:#1b82b4;--e:#229ED9;--f:#10B981;--g:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
     *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -89,7 +114,7 @@
     </div>
 
     <!-- Center Button (Btn 1) -->
-    <a href="https://t.me/+4d5T3p8zjKQ1Y2U1" target="_blank" rel="noopener" class="q">
+    <a href="https://t.me/+4d5T3p8zjKQ1Y2U1" onclick="trackJoinClick()" target="_blank" rel="noopener" class="q">
       <svg class="r" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-.99.53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.07-.75 4.19-1.82 6.98-3.02 8.38-3.6 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.16-.03.26z"/></svg>
       <span>JOIN FREE TELEGRAM NOW</span>
     </a>
@@ -120,7 +145,7 @@
   <!-- Bottom Sticky Button (Btn 2) -->
   <div class="b2">
     <div class="b3">
-      <a href="https://t.me/+4d5T3p8zjKQ1Y2U1" target="_blank" rel="noopener" class="q" style="height:46px;font-size:14px">
+      <a href="https://t.me/+4d5T3p8zjKQ1Y2U1" onclick="trackJoinClick()" target="_blank" rel="noopener" class="q" style="height:46px;font-size:14px">
         <svg class="r" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-.99.53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.07-.75 4.19-1.82 6.98-3.02 8.38-3.6 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.16-.03.26z"/></svg>
         <span>JOIN TELEGRAM CHANNEL</span>
       </a>
@@ -147,4 +172,4 @@
     });
   </script>
 </body>
-</html>  
+</html>
