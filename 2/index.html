@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>VIP Analysis Education & Community | Join Telegram</title>
+
+    <!-- Preconnect to image hosts for maximum speed -->
+    <link rel="preconnect" href="https://tara567pro.live" crossorigin>
+    <link rel="preconnect" href="https://encrypted-tbn0.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://i.pinimg.com" crossorigin>
+
+    <style>
+        /* CRITICAL ULTRA-LIGHT CSS (< 4KB Payload) */
+        :root {
+            --telegram: #229ED9;
+            --telegram-dark: #1b82b4;
+            --gold: #FFD700;
+            --green: #10B981;
+            --bg-dark: #0b0f19;
+            --card-bg: rgba(19, 27, 46, 0.85);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #f3f4f6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            line-height: 1.4;
+            padding-bottom: 90px;
+        }
+
+        /* Speed-optimized layout container */
+        .container {
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 12px 14px;
+        }
+
+        /* Top Notice Bar */
+        .top-bar {
+            background: linear-gradient(90deg, #1d72b8, #10B981);
+            color: #fff;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            padding: 8px 12px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .live-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #00ff77;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse-dot 1.2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.8); }
+        }
+
+        /* Hero Card */
+        .hero-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 14px;
+        }
+
+        /* Banner Slider (2 Sec Switch) */
+        .banner-box {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background-color: #111827;
+            overflow: hidden;
+        }
+
+        .banner-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            will-change: opacity;
+        }
+
+        .banner-img.active {
+            opacity: 1;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--bg-dark), transparent 70%);
+            pointer-events: none;
+        }
+
+        .badge-verified {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            z-index: 5;
+        }
+
+        /* DP Avatar Section (1 Sec Switch) */
+        .profile-area {
+            position: relative;
+            margin-top: -50px;
+            text-align: center;
+            padding: 0 16px 16px;
+            z-index: 6;
+        }
+
+        .avatar-ring {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, var(--telegram), var(--gold));
+            box-shadow: 0 0 20px rgba(34, 158, 217, 0.6);
+            position: relative;
+        }
+
+        .avatar-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #1f2937;
+        }
+
+        .dp-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            will-change: opacity;
+        }
+
+        .dp-img.active {
+            opacity: 1;
+        }
+
+        .online-badge {
+            position: absolute;
+            bottom: 2px;
+            right: 4px;
+            width: 16px;
+            height: 16px;
+            background: #10B981;
+            border: 2px solid var(--bg-dark);
+            border-radius: 50%;
+        }
+
+        .profile-title {
+            font-size: 20px;
+            font-weight: 900;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            letter-spacing: -0.3px;
+        }
+
+        .profile-sub {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-top: 4px;
+            font-weight: 500;
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #e5e7eb;
+        }
+
+        /* HIGH-CONVERTING CTA BUTTONS */
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: linear-gradient(90deg, #229ED9 0%, #1b82b4 100%);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(34, 158, 217, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            animation: pulse-glow 2s infinite ease-in-out;
+        }
+
+        .cta-btn:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(34, 158, 217, 0.5); }
+            50% { box-shadow: 0 0 28px rgba(34, 158, 217, 0.85); }
+        }
+
+        .cta-subtext {
+            text-align: center;
+            font-size: 11px;
+            color: #9ca3af;
+            margin-top: 6px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 10px 6px;
+            text-align: center;
+        }
+
+        .stat-val {
+            font-size: 17px;
+            font-weight: 900;
+            color: var(--telegram);
+        }
+
+        .stat-lbl {
+            font-size: 9px;
+            color: #9ca3af;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+
+        /* Value Section */
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+
+        .info-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .info-list {
+            list-style: none;
+            display: flex;
+            flex-col;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .info-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: rgba(34, 158, 217, 0.15);
+            color: var(--telegram);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .info-text h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #f3f4f6;
+        }
+
+        .info-text p {
+            font-size: 10.5px;
+            color: #9ca3af;
+            margin-top: 1px;
+        }
+
+        /* Reviews Section */
+        .review-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 10px;
+            margin-bottom: 8px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .avatar-initial {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #2563eb;
+            color: #fff;
+            font-weight: 800;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .review-content {
+            flex: 1;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .review-name {
+            font-size: 11px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 9px;
+        }
+
+        .review-body {
+            font-size: 10.5px;
+            color: #d1d5db;
+            margin-top: 2px;
+            font-style: italic;
+        }
+
+        /* Floating Join Popup Toast */
+        .toast {
+            position: fixed;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-120%);
+            width: calc(100% - 24px);
+            max-width: 420px;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(34, 158, 217, 0.5);
+            border-radius: 14px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            z-index: 100;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(6px);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--telegram);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .toast-info {
+            flex: 1;
+        }
+
+        .toast-title {
+            font-size: 11px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .toast-desc {
+            font-size: 9.5px;
+            color: #9ca3af;
+        }
+
+        .toast-tag {
+            font-size: 8.5px;
+            font-weight: 700;
+            color: #10B981;
+            background: rgba(16, 185, 129, 0.15);
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+
+        /* Fixed Mobile Sticky Bottom Bar */
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(11, 15, 25, 0.95);
+            border-top: 1px solid var(--border-color);
+            padding: 10px 14px;
+            backdrop-filter: blur(8px);
+            z-index: 90;
+        }
+
+        .sticky-wrapper {
+            max-width: 520px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* SVG Utility classes */
+        .icon-svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Speed Announcement Bar -->
+    <div class="top-bar">
+        <span class="live-dot"></span>
+        <span>FREE VIP ACCESS: JOIN ANALYTICS COMMUNITY NOW</span>
+    </div>
+
+    <div class="container">
+
+        <!-- Hero Card with Fast Slider & DP -->
+        <div class="hero-card">
+            
+            <!-- Banner Slider (Changes every 2 seconds) -->
+            <div class="banner-box" id="banner-box">
+                <img id="banner-0" class="banner-img active" src="https://tara567pro.live/banner/banner.png" alt="Market Analysis Banner 1" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'300\' fill=\'%23111827\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23229ED9\' font-size=\'20\' text-anchor=\'middle\'>VIP Analysis Hub</text></svg>'">
+                <img id="banner-1" class="banner-img" src="https://tara567pro.live/banner/banner1.png" alt="Market Analysis Banner 2" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'300\' fill=\'%230f172a\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%2300F2FE\' font-size=\'20\' text-anchor=\'middle\'>High Precision Insights</text></svg>'">
+                <img id="banner-2" class="banner-img" src="https://tara567pro.live/banner/banner2.png" alt="Market Analysis Banner 3" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'300\' fill=\'%23131b2e\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23FFD700\' font-size=\'20\' text-anchor=\'middle\'>Master Market Trends</text></svg>'">
+                <div class="banner-overlay"></div>
+
+                <div class="badge-verified">
+                    <!-- Check SVG -->
+                    <svg class="icon-svg" viewBox="0 0 20 20" fill="#229ED9"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Verified Analyst</span>
+                </div>
+            </div>
+
+            <!-- Profile Avatar Section (Changes every 1 second) -->
+            <div class="profile-area">
+                <div class="avatar-ring">
+                    <div class="avatar-inner">
+                        <img id="dp-0" class="dp-img active" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Qm4debFGAn87-Hi_bE7cTagNWLtWgHnbqWo-lvCg-w&s=10" alt="Profile DP 1" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' fill=\'%23229ED9\'><rect width=\'100%\' height=\'100%\'/></svg>'">
+                        <img id="dp-1" class="dp-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGcxe1o1r6A79gqYpAVibEFE9OaB0UKRoCDRVzIF-lw&s=10" alt="Profile DP 2" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' fill=\'%2310B981\'><rect width=\'100%\' height=\'100%\'/></svg>'">
+                        <img id="dp-2" class="dp-img" src="https://i.pinimg.com/originals/92/7a/4f/927a4ffde0cfe320b82fd4cd99a45760.gif" alt="Profile DP 3" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' fill=\'%23FFD700\'><rect width=\'100%\' height=\'100%\'/></svg>'">
+                    </div>
+                    <span class="online-badge"></span>
+                </div>
+
+                <h1 class="profile-title">
+                    Analysis Community VIP
+                    <!-- Verified Checkmark -->
+                    <svg style="width:20px; height:20px;" viewBox="0 0 20 20" fill="#229ED9"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                </h1>
+
+                <p class="profile-sub">
+                    India's top educational channel for daily market breakdown, data analysis & high-accuracy prediction insights.
+                </p>
+
+                <div class="stat-tag">
+                    <svg class="icon-svg" viewBox="0 0 20 20" fill="#229ED9"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3.005 3.005 0 013.75-2.906z"/></svg>
+                    <span>54,200+ Active Members</span>
+                    <span>•</span>
+                    <span style="color:#10B981">95%+ Precision</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CTA BUTTON -->
+        <a href="https://t.me/+4d5T3p8zjKQ1Y2U1" target="_blank" rel="noopener noreferrer" class="cta-btn">
+            <!-- Telegram SVG -->
+            <svg style="width:22px; height:22px;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-.99.53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.07-.75 4.19-1.82 6.98-3.02 8.38-3.6 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.16-.03.26z"/></svg>
+            <span>JOIN TELEGRAM TODAY</span>
+            <svg style="width:18px; height:18px;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+
+        <div class="cta-subtext">
+            <svg style="width:13px; height:13px; color:#10B981" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span>100% Free Educational Access • Instant Link</span>
+        </div>
+
+        <!-- Fast Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-val">54.2K</div>
+                <div class="stat-lbl">Learners</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-val" style="color:#10B981">95.4%</div>
+                <div class="stat-lbl">Accuracy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-val" style="color:#FFD700">Daily</div>
+                <div class="stat-lbl">Analysis</div>
+            </div>
+        </div>
+
+        <!-- Key Educational Values -->
+        <div class="info-card">
+            <div class="info-title">
+                <svg class="icon-svg" style="color:#FFD700" viewBox="0 0 20 20" fill="currentColor"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356.257l4 4.5a1 1 0 001.388 0l4-4.5a1 1 0 01.356-.257l2.644-1.131a1 1 0 000-1.84l-7-3z"/><path d="M4.31 10.382l-1.656.71a1 1 0 000 1.84l7 3a1 1 0 00.788 0l7-3a1 1 0 000-1.84l-1.656-.71a1 1 0 01-.356.257l-4 4.5a3 3 0 01-4.162 0l-4-4.5a1 1 0 01-.356-.257z"/></svg>
+                <span>Why Join Our Community?</span>
+            </div>
+
+            <ul class="info-list">
+                <li class="info-item">
+                    <div class="info-icon">
+                        <svg class="icon-svg" viewBox="0 0 20 20" fill="currentColor"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/></svg>
+                    </div>
+                    <div class="info-text">
+                        <h4>Daily Market Trend Analysis</h4>
+                        <p>Complete breakdown of data metrics & statistical likelihood before key events.</p>
+                    </div>
+                </li>
+
+                <li class="info-item">
+                    <div class="info-icon" style="color:#10B981; background:rgba(16, 185, 129, 0.15)">
+                        <svg class="icon-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <div class="info-text">
+                        <h4>Risk Capital Education</h4>
+                        <p>Learn disciplined capital strategy to manage long-term portfolio sustainability.</p>
+                    </div>
+                </li>
+
+                <li class="info-item">
+                    <div class="info-icon" style="color:#FFD700; background:rgba(255, 215, 0, 0.15)">
+                        <svg class="icon-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.381z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <div class="info-text">
+                        <h4>Instant Telegram Push Alerts</h4>
+                        <p>Real-time notifications with visual charts and educational breakdown guides.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Fast Social Proof Reviews -->
+        <div style="margin-top: 10px;">
+            <div style="font-size:11px; font-weight:800; color:#9ca3af; text-transform:uppercase; text-align:center; margin-bottom:8px;">Member Reviews</div>
+            
+            <div class="review-box">
+                <div class="avatar-initial">RK</div>
+                <div class="review-content">
+                    <div class="review-header">
+                        <span class="review-name">Rohit K. (Mumbai)</span>
+                        <span class="stars">★★★★★</span>
+                    </div>
+                    <div class="review-body">"Accurate market breakdown! Learning a lot about risk management here."</div>
+                </div>
+            </div>
+
+            <div class="review-box">
+                <div class="avatar-initial" style="background:#059669">AS</div>
+                <div class="review-content">
+                    <div class="review-header">
+                        <span class="review-name">Aman S. (Delhi)</span>
+                        <span class="stars">★★★★★</span>
+                    </div>
+                    <div class="review-body">"Joined from Meta ads 2 weeks ago. Best decision ever. Pure value."</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Speed Footer -->
+        <div style="text-align: center; font-size: 10px; color: #6b7280; padding: 16px 0 20px;">
+            <p>© 2026 VIP Analysis Community. Educational Purpose Only.</p>
+        </div>
+
+    </div>
+
+    <!-- STICKY MOBILE BOTTOM BAR FOR CONVERSION -->
+    <div class="sticky-bar">
+        <div class="sticky-wrapper">
+            <a href="https://t.me/+4d5T3p8zjKQ1Y2U1" target="_blank" rel="noopener noreferrer" class="cta-btn" style="padding: 12px 16px; font-size: 15px;">
+                <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-.99.53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.07-.75 4.19-1.82 6.98-3.02 8.38-3.6 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.16-.03.26z"/></svg>
+                <span>JOIN TELEGRAM TODAY</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating Live Join Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-icon">
+            <svg style="width:16px; height:16px;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="toast-info">
+            <div id="toast-user" class="toast-title">Rahul M. from Delhi</div>
+            <div class="toast-desc">Joined Telegram VIP Channel</div>
+        </div>
+        <span class="toast-tag">Just Now</span>
+    </div>
+
+    <!-- ULTRA-LIGHT VANILLA JS (< 1KB) -->
+    <script>
+        (function() {
+            // --- 1. BANNER AUTO SLIDER (Switches every 2 Seconds) ---
+            var bannerIdx = 0;
+            var bannerTotal = 3;
+            setInterval(function() {
+                var prev = document.getElementById('banner-' + bannerIdx);
+                if (prev) prev.classList.remove('active');
+                bannerIdx = (bannerIdx + 1) % bannerTotal;
+                var next = document.getElementById('banner-' + bannerIdx);
+                if (next) next.classList.add('active');
+            }, 2000);
+
+            // --- 2. DP AVATAR AUTO FADE (Switches every 1 Second) ---
+            var dpIdx = 0;
+            var dpTotal = 3;
+            setInterval(function() {
+                var prevDp = document.getElementById('dp-' + dpIdx);
+                if (prevDp) prevDp.classList.remove('active');
+                dpIdx = (dpIdx + 1) % dpTotal;
+                var nextDp = document.getElementById('dp-' + dpIdx);
+                if (nextDp) nextDp.classList.add('active');
+            }, 1000);
+
+            // --- 3. DYNAMIC SOCIAL PROOF NOTIFICATIONS ---
+            var users = [
+                "Rahul M. from Delhi",
+                "Priya S. from Bangalore",
+                "Ankit V. from Lucknow",
+                "Suresh K. from Kolkata",
+                "Karan P. from Ahmedabad",
+                "Deepak R. from Pune"
+            ];
+            var toastEl = document.getElementById('toast');
+            var toastUser = document.getElementById('toast-user');
+
+            function showToast() {
+                if (!toastEl || !toastUser) return;
+                var randUser = users[Math.floor(Math.random() * users.length)];
+                toastUser.textContent = randUser;
+                toastEl.classList.add('show');
+
+                setTimeout(function() {
+                    toastEl.classList.remove('show');
+                }, 3000);
+            }
+
+            // Trigger popup after 2.5s, then every 7.5s
+            setTimeout(showToast, 2500);
+            setInterval(showToast, 7500);
+        })();
+    </script>
+</body>
+</html>
