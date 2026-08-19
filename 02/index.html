@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Analysis Education & Community | Join Telegram</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        telegram: '#229ED9',
+                        telegramHover: '#1B82B4',
+                        gold: '#FFD700',
+                        accent: '#00F2FE',
+                        darkBg: '#0b0f19',
+                        darkCard: '#131b2e'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Keyframe Animations */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(34, 158, 217, 0.6), 0 0 30px rgba(34, 158, 217, 0.3); transform: scale(1); }
+            50% { box-shadow: 0 0 25px rgba(34, 158, 217, 0.9), 0 0 45px rgba(34, 158, 217, 0.5); transform: scale(1.02); }
+        }
+        
+        @keyframes pulseGold {
+            0%, 100% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.9); }
+        }
+
+        .cta-pulse {
+            animation: pulseGlow 2s infinite ease-in-out;
+        }
+
+        .gold-pulse {
+            animation: pulseGold 2s infinite ease-in-out;
+        }
+
+        /* Smooth Slider Transitions */
+        .banner-slide {
+            transition: opacity 0.8s ease-in-out;
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 1-Second Smooth Fade for DP */
+        .dp-fade-img {
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Glassmorphism Styling */
+        .glass-panel {
+            background: rgba(19, 27, 46, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-badge {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-darkBg text-gray-100 font-sans min-h-screen flex flex-col justify-between pb-24 md:pb-12 antialiased selection:bg-telegram selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-telegram to-blue-700 text-white text-xs md:text-sm font-semibold py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 bg-green-400 rounded-full animate-ping"></span>
+        <span>FREE VIP ACCESS: JOIN OUR ANALYTICS COMMUNITY TODAY</span>
+    </div>
+
+    <!-- Main Wrapper -->
+    <main class="max-w-md md:max-w-2xl mx-auto w-full px-4 pt-4 pb-8 space-y-6">
+
+        <!-- Banner & Profile Header Section -->
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-900 border border-slate-800">
+            
+            <!-- Banner Slider Box (Changes every 2 seconds) -->
+            <div id="banner-container" class="relative w-full h-48 sm:h-64 bg-slate-800 overflow-hidden">
+                <!-- Slide 1 -->
+                <img id="banner-0" src="https://tara567pro.live/banner/banner.png" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/1e293b/229ED9?text=Analysis+Community+1';" 
+                     class="banner-slide opacity-100 z-10" alt="Analysis Banner 1">
+                
+                <!-- Slide 2 -->
+                <img id="banner-1" src="https://tara567pro.live/banner/banner1.png" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/0f172a/00F2FE?text=Exclusive+Market+Insights';" 
+                     class="banner-slide opacity-0 z-0" alt="Analysis Banner 2">
+                
+                <!-- Slide 3 -->
+                <img id="banner-2" src="https://tara567pro.live/banner/banner2.png" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/131b2e/FFD700?text=Master+Trading+%26+Sports+Stats';" 
+                     class="banner-slide opacity-0 z-0" alt="Analysis Banner 3">
+
+                <!-- Dark Gradient Overlay for text contrast -->
+                <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-black/40 z-20 pointer-events-none"></div>
+
+                <!-- Verified Badge Top Left -->
+                <div class="absolute top-3 left-3 z-30 glass-badge px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
+                    <i class="fa-solid font-bold fa-circle-check text-telegram text-sm"></i>
+                    <span class="text-xs font-bold tracking-wider text-white uppercase">Verified Analyst</span>
+                </div>
+
+                <!-- Live Indicator Top Right -->
+                <div class="absolute top-3 right-3 z-30 bg-red-600/90 text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    <span>LIVE UPDATES</span>
+                </div>
+            </div>
+
+            <!-- Profile Avatar Section (Fades every 1 second) -->
+            <div class="relative px-6 pb-6 pt-0 -mt-16 z-30 text-center flex flex-col items-center">
+                
+                <!-- DP Container with Glowing Border -->
+                <div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-tr from-telegram via-accent to-gold shadow-2xl gold-pulse mb-3">
+                    <div class="relative w-full h-full rounded-full overflow-hidden bg-slate-900 border-2 border-slate-900">
+                        <!-- DP Image 1 -->
+                        <img id="dp-0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Qm4debFGAn87-Hi_bE7cTagNWLtWgHnbqWo-lvCg-w&s=10" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/150x150/229ED9/ffffff?text=DP+1';" 
+                             class="dp-fade-img opacity-100 z-10" alt="Analyst Profile 1">
+                        
+                        <!-- DP Image 2 -->
+                        <img id="dp-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGcxe1o1r6A79gqYpAVibEFE9OaB0UKRoCDRVzIF-lw&s=10" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/150x150/00F2FE/ffffff?text=DP+2';" 
+                             class="dp-fade-img opacity-0 z-0" alt="Analyst Profile 2">
+                        
+                        <!-- DP Image 3 -->
+                        <img id="dp-2" src="https://i.pinimg.com/originals/92/7a/4f/927a4ffde0cfe320b82fd4cd99a45760.gif" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/150x150/FFD700/000000?text=DP+3';" 
+                             class="dp-fade-img opacity-0 z-0" alt="Analyst Profile 3">
+                    </div>
+
+                    <!-- Online Green Pulse Badge -->
+                    <span class="absolute bottom-1 right-2 w-5 h-5 bg-green-500 border-2 border-darkBg rounded-full z-40" title="Online Now"></span>
+                </div>
+
+                <!-- Channel Title & Bio -->
+                <h1 class="text-2xl sm:text-3xl font-extrabold font-heading text-white tracking-tight flex items-center justify-center gap-2">
+                    Analysis Community VIP
+                    <i class="fa-solid fa-square-check text-telegram text-xl"></i>
+                </h1>
+                
+                <p class="text-sm sm:text-base text-gray-300 font-medium mt-1 max-w-lg leading-relaxed">
+                    India's #1 Educational Analysis Hub for Smart Predictions, Market Breakdown & High-Accuracy Insights.
+                </p>
+
+                <!-- Sub stats badge -->
+                <div class="flex items-center gap-4 mt-3 text-xs font-semibold text-gray-400 bg-slate-800/80 px-4 py-1.5 rounded-full border border-slate-700">
+                    <span><i class="fa-solid fa-users text-telegram mr-1"></i> 54,200+ Members</span>
+                    <span class="text-slate-600">•</span>
+                    <span><i class="fa-solid fa-chart-line text-emerald-400 mr-1"></i> 95%+ Accuracy Rate</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CTA BUTTON SECTION -->
+        <div class="space-y-3">
+            <a href="https://t.me/+4d5T3p8zjKQ1Y2U1" target="_blank" rel="noopener noreferrer" 
+               class="cta-pulse block w-full bg-gradient-to-r from-telegram via-sky-500 to-blue-600 hover:from-sky-500 hover:to-telegram text-white font-extrabold text-lg sm:text-xl py-4 px-6 rounded-2xl text-center shadow-xl transition transform active:scale-95 border border-sky-400/40">
+                <div class="flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-telegram text-2xl sm:text-3xl"></i>
+                    <span class="uppercase tracking-wider">JOIN TELEGRAM TODAY</span>
+                    <i class="fa-solid fa-arrow-right text-lg animate-bounce-x"></i>
+                </div>
+            </a>
+
+            <!-- Subtext under main CTA -->
+            <p class="text-center text-xs text-slate-400 font-medium flex items-center justify-center gap-1">
+                <i class="fa-solid fa-shield-halved text-emerald-400"></i> 100% Free Educational Access • Instant Channel Link
+            </p>
+        </div>
+
+        <!-- Live Community Highlights & Proof Grid -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-3 text-center">
+            <div class="glass-panel p-3 sm:p-4 rounded-2xl border border-slate-800">
+                <div class="text-lg sm:text-2xl font-black text-telegram font-heading">54.2K</div>
+                <div class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider font-semibold mt-0.5">Active Learners</div>
+            </div>
+            <div class="glass-panel p-3 sm:p-4 rounded-2xl border border-slate-800">
+                <div class="text-lg sm:text-2xl font-black text-emerald-400 font-heading">95.4%</div>
+                <div class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider font-semibold mt-0.5">Analysis Precision</div>
+            </div>
+            <div class="glass-panel p-3 sm:p-4 rounded-2xl border border-slate-800">
+                <div class="text-lg sm:text-2xl font-black text-gold font-heading">Daily</div>
+                <div class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider font-semibold mt-0.5">Free Sessions</div>
+            </div>
+        </div>
+
+        <!-- Key Benefits Section -->
+        <div class="glass-panel p-5 sm:p-6 rounded-3xl space-y-4 border border-slate-800">
+            <h2 class="text-lg sm:text-xl font-extrabold text-white font-heading flex items-center gap-2 border-b border-slate-800 pb-3">
+                <i class="fa-solid fa-graduation-cap text-gold"></i>
+                Why Learn With Our Community?
+            </h2>
+
+            <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                    <div class="w-7 h-7 rounded-full bg-telegram/20 text-telegram flex items-center justify-center shrink-0 mt-0.5">
+                        <i class="fa-solid fa-chart-pie text-xs"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white">Daily In-Depth Market Analysis</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">Get breakdown of trends, data metrics, and statistical likelihood before every major event.</p>
+                    </div>
+                </li>
+
+                <li class="flex items-start gap-3">
+                    <div class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <i class="fa-solid fa-shield-cat text-xs"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white">Risk Management Education</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">Learn how to manage capital effectively and maintain a disciplined long-term strategy.</p>
+                    </div>
+                </li>
+
+                <li class="flex items-start gap-3">
+                    <div class="w-7 h-7 rounded-full bg-gold/20 text-gold flex items-center justify-center shrink-0 mt-0.5">
+                        <i class="fa-solid fa-bolt text-xs"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white">Real-Time Telegram Alerts</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">Instant push notifications with high accuracy charts, breakdown notes & video guides.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SECONDARY CTA BUTTON -->
+        <div class="pt-2">
+            <a href="https://t.me/+4d5T3p8zjKQ1Y2U1" target="_blank" rel="noopener noreferrer" 
+               class="block w-full bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-600 hover:to-teal-600 text-white font-extrabold text-base sm:text-lg py-3.5 px-6 rounded-2xl text-center shadow-lg transition transform active:scale-95 border border-emerald-400/30">
+                <div class="flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-users-viewfinder text-xl"></i>
+                    <span>JOIN TELEGRAM TODAY (FREE ACCESS)</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Member Reviews / Proof Carousel -->
+        <div class="space-y-3 pt-2">
+            <h2 class="text-sm font-bold uppercase tracking-wider text-gray-400 text-center">What Our Members Say</h2>
+            
+            <div class="grid grid-cols-1 gap-3">
+                <!-- Review 1 -->
+                <div class="glass-panel p-4 rounded-2xl border border-slate-800/80 flex items-start gap-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                        RK
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-xs font-bold text-white">Rohit K. <span class="text-[10px] text-gray-400 font-normal">from Mumbai</span></h4>
+                            <div class="text-gold text-[10px]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-300 italic">"The match and market analysis in this Telegram channel is unbelievable. Clear explanation with graphs!"</p>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-panel p-4 rounded-2xl border border-slate-800/80 flex items-start gap-3">
+                    <div class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                        AS
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-xs font-bold text-white">Aman S. <span class="text-[10px] text-gray-400 font-normal">from Delhi</span></h4>
+                            <div class="text-gold text-[10px]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-300 italic">"Joined 3 weeks ago via Meta ads. Best decision ever. Pure educational value without spam."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Urgency Footer Disclaimer -->
+        <div class="text-center text-[11px] text-slate-500 pt-4 pb-12 space-y-2">
+            <p>© 2026 Educational Analysis Community. All Rights Reserved.</p>
+            <p class="text-[10px] text-slate-600">Disclaimer: All insights and analysis provided are strictly for educational and informational purposes.</p>
+        </div>
+
+    </main>
+
+    <!-- STICKY BOTTOM BAR FOR MOBILE CONVERSION -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-darkBg/95 backdrop-blur-md border-t border-slate-800 shadow-2xl">
+        <div class="max-w-md mx-auto flex items-center gap-3">
+            <div class="hidden sm:flex flex-col">
+                <span class="text-xs font-extrabold text-white">Free Telegram VIP</span>
+                <span class="text-[10px] text-emerald-400 font-medium">● 1,420 Users Online</span>
+            </div>
+            
+            <a href="https://t.me/+4d5T3p8zjKQ1Y2U1" target="_blank" rel="noopener noreferrer" 
+               class="cta-pulse flex-1 bg-gradient-to-r from-telegram to-blue-600 text-white font-extrabold text-base sm:text-lg py-3 px-4 rounded-xl text-center shadow-lg flex items-center justify-center gap-2 border border-sky-300/30">
+                <i class="fa-brands fa-telegram text-2xl"></i>
+                <span class="uppercase tracking-wide">JOIN TELEGRAM TODAY</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating Live Join Notification Popups -->
+    <div id="join-popup" class="fixed top-14 left-4 right-4 sm:left-auto sm:right-4 sm:w-80 bg-slate-900/95 border border-telegram/40 text-white p-3 rounded-2xl shadow-2xl z-50 transform translate-y-[-150%] opacity-0 transition-all duration-500 flex items-center gap-3 backdrop-blur-md">
+        <div class="w-9 h-9 rounded-full bg-telegram/20 text-telegram flex items-center justify-center text-base shrink-0">
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+        <div class="flex-1 text-xs">
+            <p id="popup-text" class="font-bold text-white">Vikram S. from Jaipur</p>
+            <p class="text-gray-400 text-[10px]">Just joined Telegram Analysis VIP!</p>
+        </div>
+        <span class="text-[9px] text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded-full">Just Now</span>
+    </div>
+
+    <script>
+        // --- 1. BANNER AUTO SLIDER (Switches every 2 Seconds) ---
+        const bannerCount = 3;
+        let currentBanner = 0;
+
+        function cycleBanners() {
+            // Hide current banner
+            const currentImg = document.getElementById(`banner-${currentBanner}`);
+            if (currentImg) {
+                currentImg.classList.remove('opacity-100', 'z-10');
+                currentImg.classList.add('opacity-0', 'z-0');
+            }
+
+            // Move to next banner index
+            currentBanner = (currentBanner + 1) % bannerCount;
+
+            // Show next banner
+            const nextImg = document.getElementById(`banner-${currentBanner}`);
+            if (nextImg) {
+                nextImg.classList.remove('opacity-0', 'z-0');
+                nextImg.classList.add('opacity-100', 'z-10');
+            }
+        }
+
+        // Start Banner interval every 2000 ms (2 seconds)
+        setInterval(cycleBanners, 2000);
+
+
+        // --- 2. DP AVATAR AUTO FADE (Switches every 1 Second) ---
+        const dpCount = 3;
+        let currentDp = 0;
+
+        function cycleDp() {
+            // Hide current DP
+            const currentDpImg = document.getElementById(`dp-${currentDp}`);
+            if (currentDpImg) {
+                currentDpImg.classList.remove('opacity-100', 'z-10');
+                currentDpImg.classList.add('opacity-0', 'z-0');
+            }
+
+            // Move to next DP index
+            currentDp = (currentDp + 1) % dpCount;
+
+            // Show next DP
+            const nextDpImg = document.getElementById(`dp-${currentDp}`);
+            if (nextDpImg) {
+                nextDpImg.classList.remove('opacity-0', 'z-0');
+                nextDpImg.classList.add('opacity-100', 'z-10');
+            }
+        }
+
+        // Start DP fade interval every 1000 ms (1 second)
+        setInterval(cycleDp, 1000);
+
+
+        // --- 3. DYNAMIC RECENT JOIN POPUP NOTIFICATIONS ---
+        const sampleNames = [
+            { name: "Rahul M.", city: "Delhi" },
+            { name: "Priya S.", city: "Bangalore" },
+            { name: "Karan P.", city: "Ahmedabad" },
+            { name: "Suresh K.", city: "Kolkata" },
+            { name: "Ankit V.", city: "Lucknow" },
+            { name: "Deepak R.", city: "Pune" }
+        ];
+
+        const popup = document.getElementById('join-popup');
+        const popupText = document.getElementById('popup-text');
+
+        function triggerPopup() {
+            if (!popup || !popupText) return;
+            
+            const randomUser = sampleNames[Math.floor(Math.random() * sampleNames.length)];
+            popupText.textContent = `${randomUser.name} from ${randomUser.city}`;
+
+            // Show popup
+            popup.classList.remove('translate-y-[-150%]', 'opacity-0');
+            popup.classList.add('translate-y-0', 'opacity-100');
+
+            // Hide popup after 3.5 seconds
+            setTimeout(() => {
+                popup.classList.remove('translate-y-0', 'opacity-100');
+                popup.classList.add('translate-y-[-150%]', 'opacity-0');
+            }, 3500);
+        }
+
+        // Trigger first popup after 2 seconds, then periodically
+        window.addEventListener('load', () => {
+            setTimeout(triggerPopup, 2000);
+            setInterval(triggerPopup, 8000);
+        });
+    </script>
+</body>
+</html>
